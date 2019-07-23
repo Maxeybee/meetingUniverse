@@ -1,7 +1,7 @@
 var http = require('http');
 
 var server = http.createServer(function(req, res) {
-  res.end("Hello World");  
+  res.end("Hello World");  // faire la redirection vers l'index ici retirer le hello world
 });
 
 server.listen(1337);
