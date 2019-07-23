@@ -4,12 +4,7 @@ CREATE TABLE group_privileges(
 	,CONSTRAINT group_privileges_PK PRIMARY KEY (id_group)
 )ENGINE=InnoDB;
 
-
-#------------------------------------------------------------
-# Table: project
-#------------------------------------------------------------
-
-CREATE TABLE project(
+CREATE TABLE projects(
         id_project         Int  Auto_increment  NOT NULL ,
         project_name       Varchar (20) ,
         project_content    Text ,
@@ -18,12 +13,7 @@ CREATE TABLE project(
 	,CONSTRAINT project_PK PRIMARY KEY (id_project)
 )ENGINE=InnoDB;
 
-
-#------------------------------------------------------------
-# Table: comment
-#------------------------------------------------------------
-
-CREATE TABLE comment(
+CREATE TABLE comments(
         id_comment      Int  Auto_increment  NOT NULL ,
         comment_date    Date ,
         comment_content Varchar (100)
@@ -31,11 +21,7 @@ CREATE TABLE comment(
 )ENGINE=InnoDB;
 
 
-#------------------------------------------------------------
-# Table: email
-#------------------------------------------------------------
-
-CREATE TABLE email(
+CREATE TABLE emails(
         id_email      Int  Auto_increment  NOT NULL ,
         email_object  Varchar (50) ,
         email_content Text
@@ -43,11 +29,7 @@ CREATE TABLE email(
 )ENGINE=InnoDB;
 
 
-#------------------------------------------------------------
-# Table: user
-#------------------------------------------------------------
-
-CREATE TABLE user(
+CREATE TABLE users(
         id_user             Int  Auto_increment  NOT NULL ,
         user_name           Varchar (10) ,
         user_lastname       Varchar (30) ,
@@ -71,12 +53,7 @@ CREATE TABLE user(
 	,CONSTRAINT user_comment2_FK FOREIGN KEY (id_comment) REFERENCES comment(id_comment)
 )ENGINE=InnoDB;
 
-
-#------------------------------------------------------------
-# Table: friend
-#------------------------------------------------------------
-
-CREATE TABLE friend(
+CREATE TABLE friends(
         id_user        Int NOT NULL ,
         id_user_friend Int NOT NULL ,
         id_number      Int NOT NULL
