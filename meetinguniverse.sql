@@ -1,3 +1,8 @@
+DROP DATABASE IF EXISTS meetinguniverse;
+CREATE DATABASE meetinguniverse:
+USE  meetinguniverse:
+
+
 DROP TABLE IF EXISTS user;
 CREATE TABLE IF NOT EXISTS user (
   id_user int(11) NOT NULL AUTO_INCREMENT,
