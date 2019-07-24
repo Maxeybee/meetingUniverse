@@ -1,7 +1,12 @@
-var http = require('http');
+var express = require('express');
+var app = express();
+var port = 1337;
 
-var server = http.createServer(function(req, res) {
-  res.end('Hello moto');  // faire la redirection vers l'index ici retirer le hello world
+// route vers l'index
+app.get("/", function(req, res){
+  res.sendFile(__dirname +'/index.html')
 });
-server.listen(1337);
-console.log("Serveur web lancé sur localhost:1337 ...");
+
+app.listen(port, function(){
+  console.log("Serveur web lancé sur localhost:1337")
+});
