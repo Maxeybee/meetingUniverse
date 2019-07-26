@@ -1,8 +1,15 @@
 var express = require('express');
 var app = express();
 var port = 1337;
+var path = require('path');
 var pages = [ 'about', 'connexion','deconnexion','test']; //tableau des pages
+const swup = require('swup');
 
+
+//route vers les feuilles css
+//--------------------------------------
+app.use('/css',express.static('css'));
+//--------------------------------------
 
 
 // la route pour afficher l'index
@@ -19,10 +26,6 @@ pages.forEach(function(unePage){
     res.sendFile(__dirname +'/view/'+unePage+'.html')
   })
 });
-
-
-
-
 
 
 //Ecoute sur le Port 1337
