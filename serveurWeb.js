@@ -11,6 +11,10 @@ const swup = require('swup');
 app.use('/css',express.static('css'));
 //--------------------------------------
 
+//route vers les feuilles de config js
+//------------------------------------
+app.use('/configjs',express.static('configjs'));
+//------------------------------------
 
 // la route pour afficher l'index
 app.get("/", function(req, res){
